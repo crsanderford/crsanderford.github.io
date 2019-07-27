@@ -1,1 +1,3 @@
 remote_theme: the-development/flex
+markdown: redcarpet
+pygments: true
