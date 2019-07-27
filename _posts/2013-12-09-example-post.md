@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Example post
+title: TEST POST PLEASE IGNORE
 cover: cover.jpg
-date:   2013-12-09 12:00:00
+date:   2019-07-26 18:40:00
 categories: posts
 ---
 
