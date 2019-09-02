@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TEST POST PLEASE IGNORE
+title: TEST POST PLEASE IGNORE 2
 cover: cover.jpg
 date:   2019-07-26 18:40:00
 categories: posts
