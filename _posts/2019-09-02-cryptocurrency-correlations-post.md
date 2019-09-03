@@ -22,7 +22,7 @@ categories: posts
 
 ## What did we learn?
 
-  Investment managers generally consider correlations below 0.8 to be insignificant - this puts quite a few of these assets below the bar of correlation. In fact, every option other than Ethereum is uncorrelated with Bitcoin. Granted, some of this can be attributed to the general volatility of cryptoassets at the moment - if it's a random walk on Wall Street, maybe it's a random rush around Decentraland.
+  Investment managers generally consider correlations below 0.8 to be insignificant - this puts quite a few of these assets below the bar of correlation. In fact, every option other than Ethereum is uncorrelated with Bitcoin. Granted, some of this can be attributed to the general volatility of cryptoassets at the moment - if it's a random walk on Wall Street, maybe it's a random rush around the block(chain).
 
   Some of these correlations throw my intuitions a bit. I wasn't expecting Tether to be so uncorrelated - while the price is pegged to a dollar, I used marketcaps here precisely so that the value of the broader asset would be reflected, and less influenced by issuance schemes. Tether's marketcap can be thought of as being the amount of US dollars Tether holds in reserve to back the token, modulo for the market's broader confidence in them. There have been some crises of confidence in Tether recently, and it is reasonable to think that the inflow and outflow from Tether's coffers might be quite different from the net value of Bitcoin.
   
