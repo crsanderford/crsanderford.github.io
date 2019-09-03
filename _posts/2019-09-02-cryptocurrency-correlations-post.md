@@ -19,3 +19,15 @@ categories: posts
 ## On to the pretty pictures
 
 {% include correlationchart.html %}
+
+## What did we learn?
+
+  Investment managers generally consider correlations below 0.8 to be insignificant - this puts quite a few of these assets below the bar of correlation. In fact, every option other than Ethereum is uncorrelated with Bitcoin.
+
+  Some of these correlations throw my intuitions a bit. I wasn't expecting Tether to be so uncorrelated - while the price is pegged to a dollar, I used marketcaps here precisely so that the value of the broader asset would be reflected, and less influenced by issuance schemes. Tether's marketcap can be thought of as being the amount of US dollars Tether holds in reserve to back the token, modulo for the market's broader confidence in them. There have been some crises of confidence in Tether recently, and it is reasonable to think that the inflow and outflow from Tether's coffers might be quite different from the net value of Bitcoin.
+  
+  Other interesting items - Ethereum is more correlated to Bitcoin than Litecoin, despite Litecoin being a Bitcoin clone. The major differences Litecoin has relative to Bitcoin are a shorter block time, greater total supply and a hashing algorithm which lets CPUs and GPUs perform slightly better compared to ASICs. Ethereum is fundamentally different in that it allows for smart contracts, which dramatically expand the space of what can be done with the protocol. Binancecoin, which is largely just a medium of exchange on one of the larger exchanges, and Bitcoin Cash SV, a recent Bitcoin fork, are the least correlated other than Tether, perhaps because they both are twinned a little more closely to confidence in some individual or institution.
+  
+  Dramatic as ever in the cryptocurrency space, I suppose.
+  
+  *Data pulled from Coingecko's [API](https://www.coingecko.com/en/api) - it's free and doesn't require a key.*
