@@ -2,7 +2,6 @@
 layout: about
 title: About me
 cover: cover.jpg
-date:   2019-07-26 21:06:00
 ---
 
 ## Who am I?
