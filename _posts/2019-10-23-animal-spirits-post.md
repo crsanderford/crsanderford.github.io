@@ -8,7 +8,7 @@ categories: posts
 
 
 
-# The abstract
+## The abstract
 
 
   Sentiment analysis is a valuable tool for determining when the value of an asset is caught in a feedback loop, which can help with evading bad investment decisions, or allow you to make high-payoff contrarian trades. This is especially true of cryptocurrency markets, where there's not much fundamental information to be had and what's there is publicly available.
