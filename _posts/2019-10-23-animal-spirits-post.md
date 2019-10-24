@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animal Spirits and Emotional Support Vector Machines
-subtitle: or; predicting sentiment of #bitcoin tweets with bag-of-words and an SVM
+subtitle: or; predicting sentiment of bitcoin tweets with bag-of-words and an SVM
 cover: cover.jpg
 date:   2019-10-23 22:40:00
 categories: posts
