@@ -34,8 +34,6 @@ We can also look at the Shapley values for a specific prediction to see how the 
   
 ## On to the pretty pictures
 
-{% include correlationchart.html %}
-
 ## What did we learn?
 
   Investment managers generally consider correlations below 0.8 to be insignificant - this puts quite a few of these assets below the bar of correlation. In fact, every option other than Ethereum is uncorrelated with Bitcoin. Granted, some of this can be attributed to the general volatility of cryptoassets at the moment - if it's a random walk on Wall Street, maybe it's a random rush around the block(chain).
