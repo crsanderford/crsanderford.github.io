@@ -36,7 +36,6 @@ We can also look at the Shapley values for a specific prediction to see how the 
 "negative tweet"
 
 
-<img src="\images\negativeshap.png">
 
 
 # Into the weeds
