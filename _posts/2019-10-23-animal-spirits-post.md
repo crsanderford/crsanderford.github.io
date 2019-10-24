@@ -18,58 +18,12 @@ Sentiment analysis of tweets in the bitcoin hashtag provides some interesting re
 Below are charts displaying the importance of words in classifying tweets as positive, neutral, or negative relative to bitcoin. Mouse over the bar to see it's exact value.
 
 
-{% include positive_importance_chart.html %}
+{% include positive_importance_chart.html neutral_importance_chart.html negative_importance_chart.html %}
 
-
-(this is a text buffer)
-
-
-(this is a text buffer)
-
-
-(this is a text buffer)
-
-
-(this is a text buffer)
-
-
-(this is a text buffer)
-
-
-(this is a text buffer)
-
-
-(this is a text buffer)
-
-
-(this is a text buffer)
-
-
-(this is a text buffer)
-
-
-(this is a text buffer)
-
-
-(this is a text buffer)
-
-
-(this is a text buffer)
 
 
 {% include neutral_importance_chart.html %}
 
-
-(this is a text buffer)
-(this is a text buffer)
-(this is a text buffer)
-(this is a text buffer)
-(this is a text buffer)
-(this is a text buffer)
-(this is a text buffer)
-(this is a text buffer)
-(this is a text buffer)
-(this is a text buffer)
 {% include negative_importance_chart.html %}
 
 
