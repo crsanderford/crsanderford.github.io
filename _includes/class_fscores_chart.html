@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .vega-actions a {
+        margin-right: 12px;
+        color: #757575;
+        font-weight: normal;
+        font-size: 13px;
+    }
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"width": 400, "height": 300}, "mark": {"tooltip": null}, "background": "white"}, "data": {"name": "data-459a32779c720021e80bbccab17c450b"}, "mark": "rect", "encoding": {"color": {"type": "quantitative", "field": "fscore", "scale": {"scheme": "blueorange"}, "title": "F1 Score"}, "tooltip": [{"type": "quantitative", "field": "fscore", "title": "F1 Score"}], "x": {"type": "nominal", "field": "level_0", "sort": null, "title": null}, "y": {"type": "nominal", "field": "level_1", "sort": null, "title": null}}, "height": 550, "title": "Class F1 Scores for Test Sets", "width": 550, "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json", "datasets": {"data-459a32779c720021e80bbccab17c450b": [{"level_0": "negative", "level_1": "test set", "fscore": 0.9095652173913045}, {"level_0": "negative", "level_1": "autoscored set", "fscore": 0.5578947368421052}, {"level_0": "negative", "level_1": "hand-scored set", "fscore": 0.2236024844720497}, {"level_0": "neutral", "level_1": "test set", "fscore": 0.9318777292576419}, {"level_0": "neutral", "level_1": "autoscored set", "fscore": 0.8226822682268228}, {"level_0": "neutral", "level_1": "hand-scored set", "fscore": 0.7500000000000001}, {"level_0": "positive", "level_1": "test set", "fscore": 0.9358397118415127}, {"level_0": "positive", "level_1": "autoscored set", "fscore": 0.7839771101573676}, {"level_0": "positive", "level_1": "hand-scored set", "fscore": 0.6229508196721312}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

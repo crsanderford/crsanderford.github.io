@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .vega-actions a {
+        margin-right: 12px;
+        color: #757575;
+        font-weight: normal;
+        font-size: 13px;
+    }
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"width": 400, "height": 300}, "mark": {"tooltip": null}}, "data": {"name": "data-7897301bf7405c9a81a7e6e77b65d655"}, "mark": "bar", "encoding": {"color": {"type": "quantitative", "field": "coefs", "scale": {"scheme": "blueorange"}, "title": null}, "tooltip": [{"type": "quantitative", "field": "coefs", "title": "Importance"}], "x": {"type": "quantitative", "field": "coefs", "sort": null, "title": "Importance"}, "y": {"type": "nominal", "field": "features", "sort": {"field": "coefs", "order": "descending"}, "title": "Word"}}, "title": "20 Most Important Words for Neutral Class", "width": 550, "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json", "datasets": {"data-7897301bf7405c9a81a7e6e77b65d655": [{"features": "single", "coefs": -4.056610754201456}, {"features": "legal", "coefs": -2.8713000297478035}, {"features": "major", "coefs": -2.772312358415222}, {"features": "new", "coefs": -2.5818470155868036}, {"features": "best", "coefs": -2.5067959643532145}, {"features": "cold", "coefs": -2.316250220383604}, {"features": "trouble", "coefs": -2.3082848399551357}, {"features": "cheap", "coefs": -2.3020643628941655}, {"features": "expensive", "coefs": -2.272953082056774}, {"features": "limited", "coefs": -2.2580155785415634}, {"features": "tunisia", "coefs": 1.3678085585535107}, {"features": "8300", "coefs": 1.4182232220139557}, {"features": "trinity", "coefs": 1.4919092999390737}, {"features": "350", "coefs": 1.5417704994134374}, {"features": "6th", "coefs": 1.6229463072980077}, {"features": "spied", "coefs": 1.7671025154691322}, {"features": "importance", "coefs": 1.796576173001747}, {"features": "campaignis", "coefs": 1.8462205152975228}, {"features": "05btc", "coefs": 1.9199964635877629}, {"features": "caerus", "coefs": 2.6468456310953723}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

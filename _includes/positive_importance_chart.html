@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .vega-actions a {
+        margin-right: 12px;
+        color: #757575;
+        font-weight: normal;
+        font-size: 13px;
+    }
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"width": 400, "height": 300}, "mark": {"tooltip": null}}, "data": {"name": "data-5808b75d45f547d37270157ef1354f15"}, "mark": "bar", "encoding": {"color": {"type": "quantitative", "field": "coefs", "scale": {"scheme": "blueorange"}, "title": null}, "tooltip": [{"type": "quantitative", "field": "coefs", "title": "Importance"}], "x": {"type": "quantitative", "field": "coefs", "sort": null, "title": "Importance"}, "y": {"type": "nominal", "field": "features", "sort": {"field": "coefs", "order": "descending"}, "title": "Word"}}, "title": "20 Most Important Words for Positive Class", "width": 550, "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json", "datasets": {"data-5808b75d45f547d37270157ef1354f15": [{"features": "mad", "coefs": -3.347488988462734}, {"features": "criminal", "coefs": -2.6190990722058136}, {"features": "sick", "coefs": -2.5766493867087195}, {"features": "worthless", "coefs": -2.4062028390901893}, {"features": "caerus", "coefs": -2.272487365937051}, {"features": "crazy", "coefs": -2.1760009778529392}, {"features": "trinity", "coefs": -2.0762452178554875}, {"features": "worst", "coefs": -2.058484341141424}, {"features": "storage", "coefs": -2.0238038018467184}, {"features": "argentina", "coefs": -1.9447872763942324}, {"features": "attractive", "coefs": 2.096646843579675}, {"features": "good", "coefs": 2.1091626908526333}, {"features": "smart", "coefs": 2.122455498701213}, {"features": "best", "coefs": 2.1705060571718047}, {"features": "win", "coefs": 2.185657473926946}, {"features": "huge", "coefs": 2.204415059268194}, {"features": "important", "coefs": 2.214777136876981}, {"features": "bizarre", "coefs": 2.4044529974036073}, {"features": "significant", "coefs": 2.500391087030877}, {"features": "lol", "coefs": 3.2101792078561933}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
