@@ -15,14 +15,12 @@ categories: posts
   
 Sentiment analysis of tweets in the bitcoin hashtag provides some interesting results - while a lot of the most predictive words are simply expressions of positive or negative feeling, as you'd expect, some are quite specific - like "SEC". While that's not necessarily unexpected, it provides some real justification for using tools that are trained on the specific context of use for sentiment analysis, rather than simply using a general sentiment analysis library.
 
-Below are charts displaying the importance of words in classifying tweets as positive, neutral, or negative relative to bitcoin. Mouse over the bar to see it's exact value.
-
 
 <img src="\images\positive_importance_chart.png">
 
+<img src="\images\neutral_importance_chart.png">
 
-
-
+<img src="\images\negative_importance_chart.png">
 
 
 We can also look at the Shapley values for a specific prediction to see how the model made it's choice regarding the tweet. Red indicates pushing in favor of the predicted class, blue against it. These are fake tweets I'm putting into the model; I've intentionally avoided using words with obvious sentiment.
