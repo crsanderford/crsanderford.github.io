@@ -44,6 +44,9 @@ We can also look at the Shapley values for a specific prediction to see how the 
   
   Other interesting items - Ethereum is more correlated to Bitcoin than Litecoin, despite Litecoin being a Bitcoin clone. The major differences Litecoin has relative to Bitcoin are a shorter block time, greater total supply and a hashing algorithm which lets CPUs and GPUs perform slightly better compared to ASICs. Ethereum is fundamentally different in that it allows for smart contracts, which dramatically expand the space of what can be done with the protocol. Binancecoin, which is largely just a medium of exchange on one of the larger exchanges, and Bitcoin Cash SV, a recent Bitcoin fork, are the least correlated other than Tether, perhaps because they both are twinned a little more closely to confidence in some individual or institution.
   
+{% include class_fscores_chart.html %}
+
+  
   Dramatic as ever in the cryptocurrency space, I suppose.
   
   *Data pulled from Coingecko's [API](https://www.coingecko.com/en/api) - it's free and doesn't require a key.*
