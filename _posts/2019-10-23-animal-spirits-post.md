@@ -75,3 +75,5 @@ This was then passed into a linear support vector classifier - SVMs are notable 
 
 I also pulled a set of 1000 tweets with the bitcoin hashtag using TweePy, and made two versions of the same set - one where sentiment was autoscored with the TextBlob library, and then another where I scored them by hand. Both of them had the same classes; negative, neutral, and positive. The accuracy was substantially reduced for both - the autoscored version at 78.4 percent and the hand-scored version at 66.5 percent. This suggests a tight scope to the context of sentiment analysis - tweets at different times, scored by different people, and/or using a more general model of sentiment scoring produce drastically different results.
 Here you can see the class precisions for the holdout set, the autoscored set, and the hand-scored set.
+
+<img src="\images\class_fscores_chart.png">
