@@ -40,22 +40,38 @@ We can also look at the Shapley values for a specific prediction to see how the 
 
 
 # Into the weeds
-## A quick note on Pearson and Spearman
 
-  Most of the time the correlation coefficient you'll see used is Pearson's, which describes the linear relationship between two variables. If the relationship can be fitted perfectly to a line with positive slope, that's a 1. That said, there are other options. Most notable among them is Spearman's, which is no more than Pearson's correlation on the ranks of the data, rather than the data itself. The end result is a measurment that cares about the monotonicity of the relationship between the the two variables, rather than their relationship being perfectly linear. For example, the Pearson correlation of points which lie perfectly along a logistic curve is less than one - whereas the Spearman correlation will assign a one.
-  
-## On to the pretty pictures
+## Bulls, bears, and beauty contests
 
-## What did we learn?
+What does it mean to make money in an asset market? The necessary and sufficient condition for executing a successful trade is that it anticipates the future price of some asset to some degree of specificity. There are many ways one might go about anticipating the future price of an asset. If it's a stock, you could look at earnings reports and balance sheets to compare its book value and cashflow to its price. Similar principles apply to bonds, interest rates, and default risk; or commodities, supply, and demand.
 
-  Investment managers generally consider correlations below 0.8 to be insignificant - this puts quite a few of these assets below the bar of correlation. In fact, every option other than Ethereum is uncorrelated with Bitcoin. Granted, some of this can be attributed to the general volatility of cryptoassets at the moment - if it's a random walk on Wall Street, maybe it's a random rush around the block(chain).
 
-  Some of these correlations throw my intuitions a bit. I wasn't expecting Tether to be so uncorrelated - while the price is pegged to a dollar, I used marketcaps here precisely so that the value of the broader asset would be reflected, and less influenced by issuance schemes. Tether's marketcap can be thought of as being the amount of US dollars Tether holds in reserve to back the token, modulo for the market's broader confidence in them. There have been some crises of confidence in Tether recently, and it is reasonable to think that the inflow and outflow from Tether's coffers might be quite different from the net value of Bitcoin.
-  
-  Other interesting items - Ethereum is more correlated to Bitcoin than Litecoin, despite Litecoin being a Bitcoin clone. The major differences Litecoin has relative to Bitcoin are a shorter block time, greater total supply and a hashing algorithm which lets CPUs and GPUs perform slightly better compared to ASICs. Ethereum is fundamentally different in that it allows for smart contracts, which dramatically expand the space of what can be done with the protocol. Binancecoin, which is largely just a medium of exchange on one of the larger exchanges, and Bitcoin Cash SV, a recent Bitcoin fork, are the least correlated other than Tether, perhaps because they both are twinned a little more closely to confidence in some individual or institution.
-  
+But markets are multi-agent systems; other players generally have access to the same information you do. A bet on a given asset rising in price is a bet that everyone else who has taken up the opposite side of the bet is wrong - that they have failed to take into account some source of information, or failed to interpret that information properly. If you're an individual retail investor, that tends to be a poor bet to make - if you don't spend a few hours every day on a Bloomberg Terminal, it's better to assume either informational equilibrium or some disadvantage on your part.
+
+
+So if the general assumption is informational equilibrium, what then drives market movements other than the propagation of this information through the market? Markets are multi-agent systems; if you and the other players have access to the same information, the main item to concern yourself with is *how you anticipate other players will price the asset.* If other players will price the stock higher in the future, it pays to own it. And if you're prepared to own it due to an expectation that other players will price it higher in the future, it pays for *others* to own it!
+
+
+See the feedback loop? This is a Keynesian beauty contest - a scenario where the winning play is not a faithful expression of your own beliefs but rather anticipation of the beliefs of others. It's implicated in bubble formulation and the amplification of random noise in asset markets - but the cash value (hah!) of any hypothesis about the market is what extent you can make money with it.
+
+
+If the relevant information about a given asset has already been priced in, and sentiment is still extremely negative, this suggests that purchasing the asset is a *good idea*. Why? If all information has been accounted for in the price, sentiment should be *neutral* - the price has already declined to account for all the negative information. Therefore, the sentiment is irrational and it's eventual correction will cause the price to increase. Similar reasoning can be applied in reverse.
+
+
+This makes sentiment indicators a valuable trading tool. If the the magnitude of the sentiment regarding the asset is outsized compared to information about the actual asset, or if you think the information has already been taken into account and the sentiment hasn't leveled out, trading against it makes you money.
 
   
-  Dramatic as ever in the cryptocurrency space, I suppose.
-  
-  *Data pulled from Coingecko's [API](https://www.coingecko.com/en/api) - it's free and doesn't require a key.*
+## Why bitcoin?
+
+Bitcoin does not have earnings reports or balance sheets; it's inflation rate is set programmatically and can be anticipated near perfectly. This is largely true for other cryptocurrencies as well - the closest thing they're liable to have is money in the coffers for the foundations that fund their development, and the behavior of their developers and promoters. Much of the information that could be gleaned about a cryptocurrency, things like transaction volume, or number of unique chain validators, even things like the health of the network, can be pulled directly either from the protocol itself or from one of the many publicly available block explorer APIs. There's not a huge amount of information to be had, and what is, is readily available. Sentiment should therefore be a substantial driver, given how easy it is to incorporate other information.
+
+## The model
+
+ The dataset consists of about 50,000 tweets, all collected on March 23rd, 2018, and a sentiment score - negative, neutral or positive. The tweets were unprocessed - raw text, with their links and usernames still included. I cleaned out links, usernames, strange characters and the like with regex, and then used spaCy's language model and a bag-of-words vectorizer from scikit-learn to tokenize and vectorize the tweet, removing all punctuation and "stop words" - words which lack contextual value, like "the" or "and". This was followed by SelectKBest to keep the 2000 most correlated words. The resulting dataset consisted of the number of occurences of each of those 2000 words in each tweet.
+ 
+ 
+This was then passed into a linear support vector classifier - SVMs are notable for being able to handle high dimensionality quite well. The model achieved a fivefold cross-validation accuracy of 93.2 percent, and 93.1 percent on the holdout. For reference, the majority class was positive at 45.1 percent.
+
+
+I also pulled a set of 1000 tweets with the bitcoin hashtag using TweePy, and made two versions of the same set - one where sentiment was autoscored with the TextBlob library, and then another where I scored them by hand. Both of them had the same classes; negative, neutral, and positive. The accuracy was substantially reduced for both - the autoscored version at 78.4 percent and the hand-scored version at 66.5 percent. This suggests a tight scope to the context of sentiment analysis - tweets at different times, scored by different people, and/or using a more general model of sentiment scoring produce drastically different results.
+Here you can see the class precisions for the holdout set, the autoscored set, and the hand-scored set.
