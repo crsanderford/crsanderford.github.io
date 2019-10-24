@@ -64,7 +64,7 @@ This makes sentiment indicators a valuable trading tool. If the the magnitude of
 
 Bitcoin does not have earnings reports or balance sheets; it's inflation rate is set programmatically and can be anticipated near perfectly. This is largely true for other cryptocurrencies as well - the closest thing they're liable to have is money in the coffers for the foundations that fund their development, and the behavior of their developers and promoters. Much of the information that could be gleaned about a cryptocurrency, things like transaction volume, or number of unique chain validators, even things like the health of the network, can be pulled directly either from the protocol itself or from one of the many publicly available block explorer APIs. There's not a huge amount of information to be had, and what is, is readily available. Sentiment should therefore be a substantial driver, given how easy it is to incorporate other information.
 
-## The model
+## Model and conclusions
 
  The dataset consists of about 50,000 tweets, all collected on March 23rd, 2018, and a sentiment score - negative, neutral or positive. The tweets were unprocessed - raw text, with their links and usernames still included. I cleaned out links, usernames, strange characters and the like with regex, and then used spaCy's language model and a bag-of-words vectorizer from scikit-learn to tokenize and vectorize the tweet, removing all punctuation and "stop words" - words which lack contextual value, like "the" or "and". This was followed by SelectKBest to keep the 2000 most correlated words. The resulting dataset consisted of the number of occurences of each of those 2000 words in each tweet.
  
@@ -76,3 +76,9 @@ I also pulled a set of 1000 tweets with the bitcoin hashtag using TweePy, and ma
 Here you can see the class precisions for the holdout set, the autoscored set, and the hand-scored set.
 
 <img src="\images\class_fscores_chart.png">
+
+Scores for the negative class in the hand-scored set were especially bad - I expect this is the case due to double negatives. I intentionally used only one-grams to diminish the feature space; including two-grams would likely have helped a great deal. It's also worth noting that each dataset was generated over a period of less than a day - neither was exposed to a large range of sentiments. 
+
+*Data provided by Al Mercado [@mercal](https://data.world/mercal/btc-tweets-sentiment) /en/api) at data.world.*
+
+*Notebook available at my [github.](https://github.com/crsanderford/Animal-Spirits)*
