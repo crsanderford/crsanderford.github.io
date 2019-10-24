@@ -79,6 +79,6 @@ Here you can see the class precisions for the holdout set, the autoscored set, a
 
 Scores for the negative class in the hand-scored set were especially bad - I expect this is the case due to double negatives. I intentionally used only one-grams to diminish the feature space; including two-grams would likely have helped a great deal. It's also worth noting that each dataset was generated over a period of less than a day - neither was exposed to a large range of sentiments. 
 
-*Data provided by Al Mercado [@mercal](https://data.world/mercal/btc-tweets-sentiment) /en/api) at data.world.*
+*Data provided by Al Mercado [@mercal](https://data.world/mercal/btc-tweets-sentiment) at data.world.*
 
 *Notebook available at my [github.](https://github.com/crsanderford/Animal-Spirits)*
