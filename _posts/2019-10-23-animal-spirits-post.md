@@ -23,14 +23,15 @@ Sentiment analysis of tweets in the bitcoin hashtag provides some interesting re
 <img src="\images\negative_importance_chart.png">
 
 
-We can also look at the Shapley values for a specific prediction to see how the model made it's choice regarding the tweet. Red indicates pushing in favor of the predicted class, blue against it. These are fake tweets I'm putting into the model; I've intentionally avoided using words with obvious sentiment.
+We can also look at the Shapley values for a specific prediction to see how the model made it's choice regarding the tweet. Red indicates pushing in favor of the positive class, blue against it. These are fake tweets I'm processing with the model; I've intentionally avoided using words with obvious sentiment.
 
 "bitcoin is a tool for liberation posing as a get-rich-quick scheme"
 
+<img src="\images\positiveshap.png">
 
 "bitcoin is a distributed ledger with no net moral valence"
 
-
+<img src="\images\neutralshap.png">
 
 "bitcoin is a ponzi scheme and SEC intervention is on its way"
 
