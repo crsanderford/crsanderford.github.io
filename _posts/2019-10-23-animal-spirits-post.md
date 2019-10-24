@@ -6,7 +6,7 @@ date:   2019-10-23 22:40:00
 categories: posts
 ---
 
-## The abstract
+# The abstract
 
   Sentiment analysis is a valuable tool for determining when the value of an asset is caught in a feedback loop, which can help with evading bad investment decisions, or allow you to make high-payoff contrarian trades. This is especially true of cryptocurrency markets, where there's not much fundamental information to be had and what's there is publicly available.
   
@@ -19,6 +19,7 @@ We can also look at the Shapley values for a specific prediction to see how the 
 (shapley charts here)
 
 
+# Into the weeds
 ## A quick note on Pearson and Spearman
 
   Most of the time the correlation coefficient you'll see used is Pearson's, which describes the linear relationship between two variables. If the relationship can be fitted perfectly to a line with positive slope, that's a 1. That said, there are other options. Most notable among them is Spearman's, which is no more than Pearson's correlation on the ranks of the data, rather than the data itself. The end result is a measurment that cares about the monotonicity of the relationship between the the two variables, rather than their relationship being perfectly linear. For example, the Pearson correlation of points which lie perfectly along a logistic curve is less than one - whereas the Spearman correlation will assign a one.
