@@ -24,7 +24,19 @@ Sentiment analysis of tweets in the bitcoin hashtag provides some interesting re
 
 
 We can also look at the Shapley values for a specific prediction to see how the model made it's choice regarding the tweet. Red indicates pushing in favor of the predicted class, blue against it. These are fake tweets I'm putting into the model; I've intentionally avoided using words with obvious sentiment.
-(shapley charts here)
+
+"positive tweet"
+
+<img src="\images\positiveshap.png">
+
+"neutral tweet"
+
+<img src="\images\neutralshap.png">
+
+"negative tweet"
+
+
+<img src="\images\negativeshap.png">
 
 
 # Into the weeds
