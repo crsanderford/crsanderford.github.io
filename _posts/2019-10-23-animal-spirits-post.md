@@ -6,7 +6,9 @@ date:   2019-10-23 22:40:00
 categories: posts
 ---
 
+
 # The abstract
+
 
   Sentiment analysis is a valuable tool for determining when the value of an asset is caught in a feedback loop, which can help with evading bad investment decisions, or allow you to make high-payoff contrarian trades. This is especially true of cryptocurrency markets, where there's not much fundamental information to be had and what's there is publicly available.
   
@@ -17,13 +19,38 @@ Below are charts displaying the importance of words in classifying tweets as pos
 
 {% include positive_importance_chart.html %}
 
+
+
+
+
+
 (this is a text buffer)
+
+
+
+
+
 
 {% include neutral_importance_chart.html %}
 
+
+
+
+
+
 (this is a text buffer)
 
+
+
+
+
+
 {% include negative_importance_chart.html %}
+
+
+
+
+
 
 We can also look at the Shapley values for a specific prediction to see how the model made it's choice regarding the tweet. Red indicates pushing in favor of the predicted class, blue against it. These are fake tweets I'm putting into the model; I've intentionally avoided using words with obvious sentiment.
 (shapley charts here)
