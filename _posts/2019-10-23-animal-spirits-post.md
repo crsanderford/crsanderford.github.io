@@ -27,15 +27,15 @@ We can also look at the Shapley values for a specific prediction to see how the 
 
 "bitcoin is a tool for liberation posing as a get-rich-quick scheme"
 
-<img style="float: right; src="\images\positiveshap.png">
+<img style="float: right;" src="\images\positiveshap.png">
 
 "bitcoin is a distributed ledger with no net moral valence"
 
-<img style="float: right; src="\images\neutralshap.png">
+<img style="float: right;" src="\images\neutralshap.png">
 
 "bitcoin is a ponzi scheme and SEC intervention is on its way"
 
-<img style="float: right; src="\images\negativeshap.png">
+<img style="float: right;" src="\images\negativeshap.png">
 
 
 # Into the weeds
