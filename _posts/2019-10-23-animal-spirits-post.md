@@ -42,16 +42,16 @@ We can also look at the Shapley values for a specific prediction to see how the 
 
 ## Bulls, bears, and beauty contests
 
-What does it mean to make money in an asset market? The necessary and sufficient condition for executing a successful trade is that it anticipates the future price of some asset to some degree of specificity. There are many ways one might go about anticipating the future price of an asset. If it's a stock, you could look at earnings reports and balance sheets to compare its book value and cashflow to its price. Similar principles apply to bonds, interest rates, and default risk; or commodities, supply, and demand.
+What does it mean to make money in a market? The necessary and sufficient condition for successful trade is that it anticipates the future price of some asset to some degree of specificity. There are many ways one might go about that - if it's a stock, you could look at earnings reports and balance sheets to compare its book value and cashflow to its price. Similar ideas apply to bonds, interest rates, and default risk; or commodities, supply, and demand.
 
 
-But markets are multi-agent systems; other players generally have access to the same information you do. A bet on a given asset rising in price is a bet that everyone else who has taken up the opposite side of the bet is wrong - that they have failed to take into account some source of information, or failed to interpret that information properly. If you're an individual retail investor, that tends to be a poor bet to make - if you don't spend a few hours every day on a Bloomberg Terminal, it's better to assume either informational equilibrium or some disadvantage on your part.
+But markets are a kind of game; and other players generally have access to the same information you do. A bet on a given asset rising in price is a bet that everyone else who has taken up the opposite side of the bet is wrong; that they have failed to take into account some source of information, or failed to interpret that information properly. If you're an individual retail investor, that tends to be a poor bet to make - if you don't spend a few hours every day on a Bloomberg Terminal, it's better to assume either informational equilibrium or some disadvantage on your part.
 
 
-So if the general assumption is informational equilibrium, what then drives market movements other than the propagation of this information through the market? Markets are multi-agent systems; if you and the other players have access to the same information, the main item to concern yourself with is *how you anticipate other players will price the asset.* If other players will price the stock higher in the future, it pays to own it. And if you're prepared to own it due to an expectation that other players will price it higher in the future, it pays for *others* to own it!
+So if the general assumption is no net advantage, what then drives market movements other than the propagation of this information through the market? Markets are a kind of game; if you and the other players have access to the same information, the main item to concern yourself with is *how you anticipate other players will price the asset.* If other players will price the stock higher in the future, it pays to own it. And if you're prepared to own it due to an expectation that other players will price it higher in the future, it pays for *others* to own it!
 
 
-See the feedback loop? This is a Keynesian beauty contest - a scenario where the winning play is not a faithful expression of your own beliefs but rather anticipation of the beliefs of others. It's implicated in bubble formulation and the amplification of random noise in asset markets - but the cash value (hah!) of any hypothesis about the market is what extent you can make money with it.
+This is a Keynesian beauty contest - a scenario where the winning play is not a faithful expression of your own beliefs but rather anticipation of the beliefs of others. It's often implicated in how bubbles form, and in the amplification of random noise in asset markets - but the cash value (hah!) of any hypothesis about the market is what extent you can make money with it.
 
 
 If the relevant information about a given asset has already been priced in, and sentiment is still extremely negative, this suggests that purchasing the asset is a *good idea*. Why? If all information has been accounted for in the price, sentiment should be *neutral* - the price has already declined to account for all the negative information. Therefore, the sentiment is irrational and it's eventual correction will cause the price to increase. Similar reasoning can be applied in reverse.
@@ -62,7 +62,7 @@ This makes sentiment indicators a valuable trading tool. If the the magnitude of
   
 ## Why bitcoin?
 
-Bitcoin does not have earnings reports or balance sheets; it's inflation rate is set programmatically and can be anticipated near perfectly. This is largely true for other cryptocurrencies as well - the closest thing they're liable to have is money in the coffers for the foundations that fund their development, and the behavior of their developers and promoters. Much of the information that could be gleaned about a cryptocurrency, things like transaction volume, or number of unique chain validators, even things like the health of the network, can be pulled directly either from the protocol itself or from one of the many publicly available block explorer APIs. There's not a huge amount of information to be had, and what is, is readily available. Sentiment should therefore be a substantial driver, given how easy it is to incorporate other information.
+Bitcoin does not have earnings reports or balance sheets; it's inflation rate is set programmatically and can be anticipated near perfectly. This is largely true for other cryptocurrencies as well - the closest thing they're liable to have is money in the coffers for the foundations that fund their development, and the behavior of their developers and promoters. Much of the information that could be gleaned about a cryptocurrency, things like transaction volume, or number of unique chain validators, even things like the health of the network, can be pulled directly either from the protocol itself or from one of many public APIs. There's not a huge amount of information to be had, and what is, is readily available. Sentiment should therefore be a substantial driver, given how easy it is to incorporate other information.
 
 ## Model and conclusions
 
@@ -77,7 +77,7 @@ Here you can see the class precisions for the holdout set, the autoscored set, a
 
 <img src="\images\class_fscores_chart.png">
 
-Scores for the negative class in the hand-scored set were especially bad - I expect this is the case due to double negatives. I intentionally used only one-grams to diminish the feature space; including two-grams would likely have helped a great deal. It's also worth noting that each dataset was generated over a period of less than a day - neither was exposed to a large range of sentiments. 
+Scores for the negative class in the hand-scored set were especially bad - I expect this is the case due to double negatives. I intentionally used only one-grams to reduce the feature space; including two-grams would likely have helped a great deal. It's also worth noting that each dataset was generated over a period of less than a day - neither was exposed to a large range of sentiments. 
 
 *Data provided by Al Mercado [@mercal](https://data.world/mercal/btc-tweets-sentiment) at data.world.*
 
