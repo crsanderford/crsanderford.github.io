@@ -8,8 +8,6 @@ categories: posts
 
 
 
-# DBSCAN from Scratch
-
 ## The Sales Pitch
 
 Data scientists *love* labeled data, and *hate* labeling data. It's time-intensive and not 
