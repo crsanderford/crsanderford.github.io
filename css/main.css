@@ -35,7 +35,7 @@ a img {
 }
 
 a:hover {
-  color: #555;
+  color: rgb(209, 133, 63);
   border: none;
 }
 
